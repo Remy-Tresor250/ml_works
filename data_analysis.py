@@ -47,6 +47,9 @@ try:
     merged_df['status_encoded'] = label_encoder.fit_transform(merged_df['status'])
 
     print(merged_df.shape)
+    print(merged_df.describe())
+    print(merged_df.info())
+    print(merged_df.head())
 
 except requests.exceptions.RequestException as e: 
     print(f"Error fetching data from API: {e}")
